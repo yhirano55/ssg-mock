@@ -3,7 +3,7 @@ namespace :build do
   task all: :environment do
     start_time = Time.current
 
-    Page.all.find_each do |page|
+    Page.includes(book: :author).all.find_each do |page|
       component = StaticPages::PageComponent.new(page: page)
       html = ApplicationController.renderer.render(component, layout: nil)
       path = Rails.root.join('public', 'build', "pages-#{page.id}.html")

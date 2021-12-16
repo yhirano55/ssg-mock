@@ -1,1 +1,3 @@
-<div>Add StaticPages::Page template here</div>
+<%= render ::LayoutComponent.new do -%>
+  <%= render ::Books::PageComponent.new(page: page) -%>
+<%- end -%>

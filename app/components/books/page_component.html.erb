@@ -1,1 +1,7 @@
-<div>Add Books::Page template here</div>
+<h2><%= page.book_title %>: <%= page.id %></h2>
+
+<%= simple_format page.content %>
+
+<hr />
+
+<p>Written by <%= page.book_author_name %></p>

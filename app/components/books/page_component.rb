@@ -5,4 +5,8 @@ class Books::PageComponent < ViewComponent::Base
     @page = page
   end
 
+  private
+
+  attr_reader :page
+
 end

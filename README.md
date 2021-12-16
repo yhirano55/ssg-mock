@@ -11,6 +11,12 @@ $ zcat db/seeds.dump.gzip | sqlite3 db/development.sqlite3
 
 ```ruby
 page = Page.first
-component = StaticPages::PageComponent.new(page: page)
+component = StaticPages::PageComponent.new(page: page, layout: nil)
 ApplicationController.renderer.render(component)
+```
+
+## How to generate all pages
+
+```
+$ bin/rails build:all
 ```

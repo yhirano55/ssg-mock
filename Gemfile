@@ -72,3 +72,5 @@ group :test do
 end
 
 gem 'ffaker'
+
+gem "view_component", "~> 2.46"
